@@ -1,0 +1,44 @@
+<?
+session_start();
+
+?>
+<HTML>
+<HEAD>
+<TITLE>학사관리시스템 로그인</TITLE>
+<meta http-equiv="Content-Type" content="text/html;charset=ecu-kr">
+</HEAD>
+<BODY link="white" vlink="white" alink="orange">
+<center><font size=5>학사관리시스템 로그인</font></center>
+<br>
+<FORM METHOD="POST" ACTION="./login2.php">
+<table border="0" align="center" cellpadding="0" cellspacing="0">
+ <tr bgcolor="#000033">
+ 
+ </tr>
+ <tr>
+ <td width="25%" bgcolor="#CCCCDD" align="center"><font size="3">
+ 아이디</font></td>
+ <td width="75%" bgcolor="#CCCCDD"><font size="3">
+ <input type="text" name="userid" style="width:100%"></font></td>
+ </tr>
+ <tr>
+ <td width="25%" bgcolor="#CCCCDD" align="center"><font size="3">
+ 패스워드</font></td>
+ <td width="75%" bgcolor="#CCCCDD"><font size="3">
+ <input type="password" name="passwd" style="width:100%"></font></td>
+ </tr>
+</table>
+<?
+if($_SESSION['errormsg']!=null)
+{
+?>
+<center><font color=red size=3><?echo $_SESSION['errormsg']?></font></center>
+<?
+}
+?>
+<p align="center">
+ <input type="submit" value="로그인"> <input type="reset" value="취소">
+</p>
+</FORM>
+</BODY>
+</HTML>
